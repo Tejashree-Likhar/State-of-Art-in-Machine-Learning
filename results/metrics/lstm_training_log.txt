@@ -1,0 +1,74 @@
+======================================================================
+LSTM MODEL - TRAINING LOG
+======================================================================
+Architecture: LSTM(50) -> Dropout(0.2) -> Dense(1)
+Window=60, Optimizer=Adam(lr=0.001), Loss=MSE
+Max epochs=100, EarlyStopping patience=15
+
+--- AAPL (Technology) ---
+Train windows=907, Val windows=159, Test windows=335
+Stopped after 36 epochs (final val_loss=0.015830)
+RMSE=20.6488  MAE=15.8062  MAPE=7.27%  R2=0.3175  (trained in 12.7s)
+
+--- NVDA (Technology) ---
+Train windows=907, Val windows=159, Test windows=335
+Stopped after 34 epochs (final val_loss=0.283830)
+RMSE=70.5338  MAE=59.2942  MAPE=55.74%  R2=-2.9436  (trained in 11.1s)
+
+--- JNJ (Healthcare) ---
+Train windows=907, Val windows=159, Test windows=335
+Stopped after 25 epochs (final val_loss=0.039573)
+RMSE=2.3237  MAE=1.4260  MAPE=0.96%  R2=0.8524  (trained in 10.4s)
+
+--- PFE (Healthcare) ---
+Train windows=907, Val windows=159, Test windows=335
+Stopped after 45 epochs (final val_loss=0.008433)
+RMSE=0.6159  MAE=0.4972  MAPE=2.01%  R2=0.8513  (trained in 15.4s)
+
+--- JPM (Financials) ---
+Train windows=907, Val windows=159, Test windows=335
+Stopped after 39 epochs (final val_loss=0.009597)
+RMSE=34.2530  MAE=25.7961  MAPE=12.40%  R2=-0.2364  (trained in 11.8s)
+
+--- GS (Financials) ---
+Train windows=907, Val windows=159, Test windows=335
+Stopped after 57 epochs (final val_loss=0.005248)
+RMSE=64.8641  MAE=42.7903  MAPE=8.55%  R2=0.4153  (trained in 18.2s)
+
+--- XOM (Energy) ---
+Train windows=907, Val windows=159, Test windows=335
+Stopped after 49 epochs (final val_loss=0.013164)
+RMSE=3.9208  MAE=3.3248  MAPE=3.08%  R2=0.7099  (trained in 14.0s)
+
+--- CVX (Energy) ---
+Train windows=907, Val windows=159, Test windows=335
+Stopped after 30 epochs (final val_loss=0.009270)
+RMSE=2.1490  MAE=1.6558  MAPE=1.16%  R2=0.9061  (trained in 9.9s)
+
+--- PG (Consumer Goods) ---
+Train windows=907, Val windows=159, Test windows=335
+Stopped after 38 epochs (final val_loss=0.009383)
+RMSE=7.7879  MAE=6.1634  MAPE=3.83%  R2=0.4222  (trained in 15.6s)
+
+--- KO (Consumer Goods) ---
+Train windows=907, Val windows=159, Test windows=335
+Stopped after 41 epochs (final val_loss=0.008057)
+RMSE=3.0533  MAE=1.9900  MAPE=3.11%  R2=0.6283  (trained in 12.6s)
+
+======================================================================
+LSTM SUMMARY (all tickers)
+======================================================================
+Ticker         Sector  Epochs_Trained      RMSE       MAE      MAPE        R2  Train_Time_Sec
+  AAPL     Technology              36 20.648767 15.806227  7.267955  0.317509       12.703932
+  NVDA     Technology              34 70.533799 59.294209 55.743825 -2.943650       11.082235
+   JNJ     Healthcare              25  2.323699  1.426003  0.963072  0.852449       10.406216
+   PFE     Healthcare              45  0.615885  0.497207  2.013178  0.851275       15.393102
+   JPM     Financials              39 34.252957 25.796121 12.399433 -0.236449       11.801241
+    GS     Financials              57 64.864126 42.790273  8.553077  0.415289       18.174726
+   XOM         Energy              49  3.920807  3.324811  3.079174  0.709905       13.954509
+   CVX         Energy              30  2.149045  1.655763  1.156055  0.906106        9.944998
+    PG Consumer Goods              38  7.787943  6.163380  3.833420  0.422181       15.637910
+    KO Consumer Goods              41  3.053258  1.990016  3.106276  0.628305       12.647601
+
+Mean RMSE across all stocks: 21.0150
+Mean MAPE across all stocks: 9.81%

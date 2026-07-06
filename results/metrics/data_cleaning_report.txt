@@ -1,0 +1,68 @@
+======================================================================
+DATA CLEANING REPORT
+======================================================================
+
+Loading raw dataset...
+Full raw dataset not found locally (137MB, excluded from this package).
+Loading pre-filtered extract instead from: ../data/raw/00_raw_extract_10stocks.csv
+Loaded pre-filtered extract shape: (15100, 8)
+
+Duplicate (Ticker, Date) rows found: 0
+No duplicates found - no action needed.
+
+Missing values per column (before handling):
+Ticker       0
+Date         0
+Open         0
+High         0
+Low          0
+Close        0
+Adj Close    0
+Volume       0
+dtype: int64
+No missing values found - no imputation needed.
+
+Trading day count per ticker (sanity check vs NYSE calendar ~252/year):
+Ticker
+AAPL    1510
+CVX     1510
+GS      1510
+JNJ     1510
+JPM     1510
+KO      1510
+NVDA    1510
+PFE     1510
+PG      1510
+XOM     1510
+Name: Date, dtype: int64
+
+All tickers share an identical trading calendar: True
+
+Checking OHLC logical consistency (High >= Low, High >= Open/Close, etc.)
+Rows violating OHLC logic: 0
+
+Checking for non-positive prices or negative volume...
+Rows with non-positive price / negative volume: 0
+
+Days with |return| > 40% (reviewed, retained as genuine market events): 0
+
+Saved combined cleaned dataset: ../data/processed\cleaned_combined.csv  shape=(15100, 9)
+  Saved AAPL: ../data/processed\AAPL_cleaned.csv  (1510 rows)
+  Saved NVDA: ../data/processed\NVDA_cleaned.csv  (1510 rows)
+  Saved JNJ: ../data/processed\JNJ_cleaned.csv  (1510 rows)
+  Saved PFE: ../data/processed\PFE_cleaned.csv  (1510 rows)
+  Saved JPM: ../data/processed\JPM_cleaned.csv  (1510 rows)
+  Saved GS: ../data/processed\GS_cleaned.csv  (1510 rows)
+  Saved XOM: ../data/processed\XOM_cleaned.csv  (1510 rows)
+  Saved CVX: ../data/processed\CVX_cleaned.csv  (1510 rows)
+  Saved PG: ../data/processed\PG_cleaned.csv  (1510 rows)
+  Saved KO: ../data/processed\KO_cleaned.csv  (1510 rows)
+
+======================================================================
+FINAL CLEAN DATASET SUMMARY
+======================================================================
+Total rows: 15100
+Tickers: ['AAPL', 'CVX', 'GS', 'JNJ', 'JPM', 'KO', 'NVDA', 'PFE', 'PG', 'XOM']
+Date range: 2019-01-02 00:00:00 to 2024-12-31 00:00:00
+Sectors covered: ['Consumer Goods', 'Energy', 'Financials', 'Healthcare', 'Technology']
+Any remaining nulls: 0

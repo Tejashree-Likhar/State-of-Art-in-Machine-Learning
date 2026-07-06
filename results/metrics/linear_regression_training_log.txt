@@ -1,0 +1,51 @@
+======================================================================
+LINEAR REGRESSION MODEL - TRAINING LOG
+======================================================================
+
+--- AAPL (Technology) ---
+RMSE=0.7186  MAE=0.5561  MAPE=0.28%  R2=0.9992  (trained in 0.02s)
+
+--- NVDA (Technology) ---
+RMSE=0.8837  MAE=0.6493  MAPE=0.67%  R2=0.9994  (trained in 0.02s)
+
+--- JNJ (Healthcare) ---
+RMSE=0.1716  MAE=0.1321  MAPE=0.09%  R2=0.9992  (trained in 0.01s)
+
+--- PFE (Healthcare) ---
+RMSE=0.0863  MAE=0.0639  MAPE=0.26%  R2=0.9971  (trained in 0.02s)
+
+--- JPM (Financials) ---
+RMSE=0.9096  MAE=0.5498  MAPE=0.28%  R2=0.9991  (trained in 0.02s)
+
+--- GS (Financials) ---
+RMSE=2.0588  MAE=1.3547  MAPE=0.31%  R2=0.9994  (trained in 0.02s)
+
+--- XOM (Energy) ---
+RMSE=0.3526  MAE=0.2726  MAPE=0.26%  R2=0.9977  (trained in 0.02s)
+
+--- CVX (Energy) ---
+RMSE=0.4425  MAE=0.3393  MAPE=0.24%  R2=0.9960  (trained in 0.02s)
+
+--- PG (Consumer Goods) ---
+RMSE=0.3387  MAE=0.2392  MAPE=0.15%  R2=0.9989  (trained in 0.01s)
+
+--- KO (Consumer Goods) ---
+RMSE=0.1046  MAE=0.0769  MAPE=0.13%  R2=0.9996  (trained in 0.02s)
+
+======================================================================
+LINEAR REGRESSION SUMMARY (all tickers)
+======================================================================
+           Model Ticker         Sector     RMSE      MAE     MAPE       R2  Train_Time_Sec
+LinearRegression   AAPL     Technology 0.718573 0.556069 0.276393 0.999173        0.022060
+LinearRegression   NVDA     Technology 0.883749 0.649334 0.672873 0.999381        0.016295
+LinearRegression    JNJ     Healthcare 0.171590 0.132147 0.088972 0.999195        0.012923
+LinearRegression    PFE     Healthcare 0.086263 0.063859 0.255932 0.997082        0.016842
+LinearRegression    JPM     Financials 0.909571 0.549847 0.280665 0.999128        0.015971
+LinearRegression     GS     Financials 2.058842 1.354739 0.309574 0.999411        0.019955
+LinearRegression    XOM         Energy 0.352563 0.272619 0.260778 0.997654        0.016268
+LinearRegression    CVX         Energy 0.442504 0.339325 0.239361 0.996019        0.017722
+LinearRegression     PG Consumer Goods 0.338657 0.239163 0.153413 0.998907        0.013338
+LinearRegression     KO Consumer Goods 0.104604 0.076933 0.127295 0.999564        0.015608
+
+Mean RMSE across all stocks: 0.6067
+Mean MAPE across all stocks: 0.27%

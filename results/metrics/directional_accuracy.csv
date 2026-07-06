@@ -1,0 +1,61 @@
+Model,Ticker,Sector,Directional_Accuracy_Pct
+ARIMA,AAPL,Technology,46.10778443113773
+ARIMA,NVDA,Technology,52.69461077844312
+ARIMA,JNJ,Healthcare,46.865671641791046
+ARIMA,PFE,Healthcare,49.244712990936556
+ARIMA,JPM,Financials,56.71641791044776
+ARIMA,GS,Financials,51.64179104477612
+ARIMA,XOM,Energy,53.753753753753756
+ARIMA,CVX,Energy,48.95522388059702
+ARIMA,PG,Consumer Goods,53.153153153153156
+ARIMA,KO,Consumer Goods,49.544072948328264
+LinearRegression,AAPL,Technology,91.91616766467065
+LinearRegression,NVDA,Technology,91.61676646706587
+LinearRegression,JNJ,Healthcare,97.91044776119404
+LinearRegression,PFE,Healthcare,96.07250755287009
+LinearRegression,JPM,Financials,94.92537313432837
+LinearRegression,GS,Financials,91.94029850746269
+LinearRegression,XOM,Energy,93.3933933933934
+LinearRegression,CVX,Energy,90.44776119402985
+LinearRegression,PG,Consumer Goods,96.09609609609609
+LinearRegression,KO,Consumer Goods,96.96048632218846
+RandomForest,AAPL,Technology,56.886227544910184
+RandomForest,NVDA,Technology,50.59880239520959
+RandomForest,JNJ,Healthcare,89.8507462686567
+RandomForest,PFE,Healthcare,84.89425981873111
+RandomForest,JPM,Financials,52.23880597014925
+RandomForest,GS,Financials,62.68656716417911
+RandomForest,XOM,Energy,63.66366366366366
+RandomForest,CVX,Energy,87.76119402985074
+RandomForest,PG,Consumer Goods,56.75675675675676
+RandomForest,KO,Consumer Goods,67.78115501519757
+XGBoost,AAPL,Technology,52.09580838323353
+XGBoost,NVDA,Technology,44.01197604790419
+XGBoost,JNJ,Healthcare,82.38805970149254
+XGBoost,PFE,Healthcare,87.00906344410876
+XGBoost,JPM,Financials,51.64179104477612
+XGBoost,GS,Financials,64.4776119402985
+XGBoost,XOM,Energy,55.25525525525525
+XGBoost,CVX,Energy,88.65671641791046
+XGBoost,PG,Consumer Goods,57.35735735735735
+XGBoost,KO,Consumer Goods,65.95744680851064
+LSTM,AAPL,Technology,43.712574850299404
+LSTM,NVDA,Technology,44.01197604790419
+LSTM,JNJ,Healthcare,52.23880597014925
+LSTM,PFE,Healthcare,52.26586102719033
+LSTM,JPM,Financials,42.98507462686567
+LSTM,GS,Financials,44.47761194029851
+LSTM,XOM,Energy,49.849849849849846
+LSTM,CVX,Energy,51.34328358208955
+LSTM,PG,Consumer Goods,48.348348348348345
+LSTM,KO,Consumer Goods,51.97568389057751
+Naive,AAPL,Technology,0.0
+Naive,NVDA,Technology,0.0
+Naive,JNJ,Healthcare,0.0
+Naive,PFE,Healthcare,0.0
+Naive,JPM,Financials,0.0
+Naive,GS,Financials,0.0
+Naive,XOM,Energy,0.0
+Naive,CVX,Energy,0.0
+Naive,PG,Consumer Goods,0.0
+Naive,KO,Consumer Goods,0.0

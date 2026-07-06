@@ -1,0 +1,45 @@
+======================================================================
+FEATURE ENGINEERING REPORT
+======================================================================
+
+Loaded cleaned data: (15100, 9)
+Tickers: ['AAPL', 'CVX', 'GS', 'JNJ', 'JPM', 'KO', 'NVDA', 'PFE', 'PG', 'XOM']
+
+AAPL: 1510 rows total, 1461 rows after dropping warm-up NaNs (first ~50 days lost to rolling windows)
+
+CVX: 1510 rows total, 1461 rows after dropping warm-up NaNs (first ~50 days lost to rolling windows)
+
+GS: 1510 rows total, 1461 rows after dropping warm-up NaNs (first ~50 days lost to rolling windows)
+
+JNJ: 1510 rows total, 1461 rows after dropping warm-up NaNs (first ~50 days lost to rolling windows)
+
+JPM: 1510 rows total, 1461 rows after dropping warm-up NaNs (first ~50 days lost to rolling windows)
+
+KO: 1510 rows total, 1461 rows after dropping warm-up NaNs (first ~50 days lost to rolling windows)
+
+NVDA: 1510 rows total, 1461 rows after dropping warm-up NaNs (first ~50 days lost to rolling windows)
+
+PFE: 1510 rows total, 1461 rows after dropping warm-up NaNs (first ~50 days lost to rolling windows)
+
+PG: 1510 rows total, 1461 rows after dropping warm-up NaNs (first ~50 days lost to rolling windows)
+
+XOM: 1510 rows total, 1461 rows after dropping warm-up NaNs (first ~50 days lost to rolling windows)
+
+Total engineered feature columns: 19
+['SMA_5', 'SMA_10', 'SMA_20', 'SMA_50', 'EMA_12', 'EMA_26', 'MACD', 'MACD_signal', 'Close_lag_1', 'Close_lag_5', 'Close_lag_10', 'Volume_lag_1', 'Volume_lag_5', 'Volume_lag_10', 'RSI_14', 'ROC_5', 'ROC_10', 'Daily_Return', 'Volatility_10']
+
+Total rows before NaN drop: 15100
+Total rows after NaN drop:  14610
+Rows dropped (rolling-window warm-up period): 490
+
+Saved: ../data/processed\features_combined.csv  shape=(14610, 28)
+  Saved AAPL: ../data/processed\AAPL_features.csv  (1461 rows, 2019-03-14 to 2024-12-31)
+  Saved CVX: ../data/processed\CVX_features.csv  (1461 rows, 2019-03-14 to 2024-12-31)
+  Saved GS: ../data/processed\GS_features.csv  (1461 rows, 2019-03-14 to 2024-12-31)
+  Saved JNJ: ../data/processed\JNJ_features.csv  (1461 rows, 2019-03-14 to 2024-12-31)
+  Saved JPM: ../data/processed\JPM_features.csv  (1461 rows, 2019-03-14 to 2024-12-31)
+  Saved KO: ../data/processed\KO_features.csv  (1461 rows, 2019-03-14 to 2024-12-31)
+  Saved NVDA: ../data/processed\NVDA_features.csv  (1461 rows, 2019-03-14 to 2024-12-31)
+  Saved PFE: ../data/processed\PFE_features.csv  (1461 rows, 2019-03-14 to 2024-12-31)
+  Saved PG: ../data/processed\PG_features.csv  (1461 rows, 2019-03-14 to 2024-12-31)
+  Saved XOM: ../data/processed\XOM_features.csv  (1461 rows, 2019-03-14 to 2024-12-31)

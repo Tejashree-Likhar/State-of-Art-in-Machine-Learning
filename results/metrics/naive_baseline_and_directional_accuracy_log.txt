@@ -1,0 +1,47 @@
+======================================================================
+NAIVE BASELINE + DIRECTIONAL ACCURACY - LOG
+======================================================================
+
+--- Part 1: Naive Previous-Close Baseline ---
+AAPL (Technology): RMSE=2.7009  MAE=1.9920  MAPE=1.00%  R2=0.9883
+NVDA (Technology): RMSE=3.0768  MAE=2.1759  MAPE=2.28%  R2=0.9925
+JNJ (Healthcare): RMSE=1.3708  MAE=1.0253  MAPE=0.70%  R2=0.9487
+PFE (Healthcare): RMSE=0.3903  MAE=0.2890  MAPE=1.14%  R2=0.9403
+JPM (Financials): RMSE=2.7253  MAE=1.7124  MAPE=0.91%  R2=0.9922
+GS (Financials): RMSE=7.1668  MAE=4.6400  MAPE=1.09%  R2=0.9929
+XOM (Energy): RMSE=1.3410  MAE=1.0347  MAPE=0.99%  R2=0.9661
+CVX (Energy): RMSE=1.8314  MAE=1.3316  MAPE=0.94%  R2=0.9318
+PG (Consumer Goods): RMSE=1.4641  MAE=1.0591  MAPE=0.69%  R2=0.9796
+KO (Consumer Goods): RMSE=0.5028  MAE=0.3767  MAPE=0.64%  R2=0.9899
+
+Naive baseline mean RMSE: 2.2570
+Naive baseline mean MAPE: 1.04%
+Naive baseline mean R2:   0.9722
+
+--- Part 2: Directional Accuracy ---
+(% of test days where predicted direction of movement matched actual direction,
+ measured relative to the previous day's actual close)
+
+Mean directional accuracy per model (across all 10 stocks):
+  ARIMA                       : 50.87%
+  Linear Regression           : 94.13%
+  Random Forest               : 67.31%
+  XGBoost                     : 64.89%
+  LSTM                        : 48.12%
+  Naive (Previous Close)      : 0.00%
+
+Directional accuracy by stock (%):
+Model   ARIMA  LinearRegression  RandomForest  XGBoost  LSTM  Naive
+Ticker                                                             
+AAPL     46.1              91.9          56.9     52.1  43.7    0.0
+NVDA     52.7              91.6          50.6     44.0  44.0    0.0
+JNJ      46.9              97.9          89.9     82.4  52.2    0.0
+PFE      49.2              96.1          84.9     87.0  52.3    0.0
+JPM      56.7              94.9          52.2     51.6  43.0    0.0
+GS       51.6              91.9          62.7     64.5  44.5    0.0
+XOM      53.8              93.4          63.7     55.3  49.8    0.0
+CVX      49.0              90.4          87.8     88.7  51.3    0.0
+PG       53.2              96.1          56.8     57.4  48.3    0.0
+KO       49.5              97.0          67.8     66.0  52.0    0.0
+
+Saved: directional_accuracy_comparison.png

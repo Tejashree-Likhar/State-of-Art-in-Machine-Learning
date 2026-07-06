@@ -1,0 +1,32 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.Python
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Large/raw data (optional - uncomment if you don't want to push data files to GitHub)
+# data/raw/*.csv
+# data/processed/*.csv
+
+# Model checkpoints / large binaries (none expected here, but just in case)
+*.h5
+*.keras
+*.pkl
+
+# Logs
+*.log
