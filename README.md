@@ -104,7 +104,7 @@ State of Art in Machine Learning/
 
 ## 4. Setup & Run
 
-### 4.1 Modelling pipeline (already run for you — this is for reproducibility)
+### 4.1 Modelling pipeline
 
 ```bash
 python -m venv venv
@@ -128,7 +128,7 @@ Random Forest and XGBoost scripts have **checkpoint/resume** built in: if interr
 just re-run the same script and it will skip tickers already completed.
 
 **Running LSTM on Google Colab (optional, for GPU speed):** upload `src/` and
-`data/processed/` to your Colab session, `!pip install tensorflow` (usually
+`data/processed/` to Colab session, `!pip install tensorflow` (usually
 pre-installed), then run `07_lstm_model.py` exactly as-is — no code changes needed.
 
 ### 4.2 Dashboard (Streamlit)
@@ -142,7 +142,7 @@ streamlit run streamlit_app/app.py
 ```
 
 This opens the dashboard at `http://localhost:8501`. It only reads from `results/`
-and `data/` — it never re-runs or modifies your models.
+and `data/` — it never re-runs or modifies the models.
 
 If you only want to explore the dashboard without setting up the full modelling
 environment, `pip install -r streamlit_app/requirements.txt` is the only install you
@@ -170,7 +170,4 @@ AAPL, PG), because these models cannot extrapolate beyond the price range seen d
 training.
 
 ## 6. What's NOT included in this repo
-- The full 137MB raw S&P 500 CSV (472 tickers) is excluded for size reasons. Download
-  it yourself from the Kaggle link above if you need to re-run the extraction step from
-  scratch. `data/raw/00_raw_extract_10stocks.csv` already contains the exact filtered
-  extract that was used, so you don't need the full file to reproduce everything else.
+- The full 137MB raw S&P 500 CSV (472 tickers) is excluded for size reasons. `data/raw/00_raw_extract_10stocks.csv` already contains the exact filtered extract that was used.
