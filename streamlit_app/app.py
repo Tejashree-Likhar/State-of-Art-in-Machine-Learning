@@ -60,6 +60,7 @@ MODEL_REGISTRY = [
      "color": "#8A5FB0"},
 ]
 MODEL_BY_LABEL = {m["label"]: m for m in MODEL_REGISTRY}
+LABEL_TO_SHORT = {m["label"]: m["short"] for m in MODEL_REGISTRY}
 SECTOR_ORDER = ["Technology", "Healthcare", "Financials", "Energy", "Consumer Goods"]
 
 DATASETS = {
@@ -212,12 +213,19 @@ for col, m in zip(chip_cols, MODEL_REGISTRY):
 st.divider()
 
 # =============================================================
-# Tabs
+# Section navigation (segmented_control persists its choice in
+# session_state via `key`, unlike st.tabs — which has no state of its
+# own and can silently reset to the first tab on an unrelated rerun,
+# e.g. when a widget inside another section changes).
 # =============================================================
-tab_overview, tab_data, tab_deep = st.tabs(["📊 Model Comparison", "🗂️ Data Sources", "🔍 Model Deep Dive"])
+SECTIONS = ["📊 Model Comparison", "🗂️ Data Sources", "🔍 Model Deep Dive"]
+active_section = st.segmented_control(
+    "Section", SECTIONS, default=SECTIONS[0], required=True,
+    key="active_section", label_visibility="collapsed",
+)
 
 # ---------------- Overview tab ----------------
-with tab_overview:
+if active_section == SECTIONS[0]:
     st.subheader("Mean error across all 10 stocks")
     st.caption("One bar per model. Switch metric to see the picture change — R² tells a very different story from RMSE.")
 
@@ -271,7 +279,7 @@ with tab_overview:
         )
 
 # ---------------- Data sources tab ----------------
-with tab_data:
+if active_section == SECTIONS[1]:
     st.subheader("Data sources")
     c1, c2 = st.columns(2)
     with c1:
@@ -311,7 +319,7 @@ with tab_data:
         st.markdown(f"**{sector}**&nbsp;&nbsp;{chips}", unsafe_allow_html=True)
 
 # ---------------- Deep dive tab ----------------
-with tab_deep:
+if active_section == SECTIONS[2]:
     default_model_idx = [m["id"] for m in MODEL_REGISTRY].index(best_id)
     sel_col1, sel_col2 = st.columns([2, 1])
     with sel_col1:
@@ -330,8 +338,15 @@ with tab_deep:
     # Per-stock table for this model (sortable natively — click any column header)
     model_rows = combined_df[combined_df["Model"] == model["metricName"]].copy()
     model_rows = model_rows.merge(tickers_df[["Ticker"]], on="Ticker", how="right")  # keep canonical order as fallback
-    model_rows["Best?"] = model_rows["Ticker"].map(lambda t: "★ BEST" if BEST_MODEL_MAP.get(t) == model["label"] else "")
-    model_rows = model_rows[["Ticker", "Sector", "RMSE", "MAE", "MAPE", "R2", "Best?"]].rename(columns={"R2": "R²"})
+    def _best_model_display(t):
+        best_label = BEST_MODEL_MAP.get(t)
+        if not best_label:
+            return "—"
+        short = LABEL_TO_SHORT.get(best_label, best_label)
+        return f"★ {short}" if best_label == model["label"] else short
+
+    model_rows["Best Model"] = model_rows["Ticker"].map(_best_model_display)
+    model_rows = model_rows[["Ticker", "Sector", "RMSE", "MAE", "MAPE", "R2", "Best Model"]].rename(columns={"R2": "R²"})
 
     # The dropdown and the clickable table both drive the *same* chart, so they
     # share one canonical value in session_state instead of each keeping their
