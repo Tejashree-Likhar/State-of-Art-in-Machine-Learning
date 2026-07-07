@@ -3,45 +3,7 @@ RANDOM FOREST MODEL - TRAINING LOG
 ======================================================================
 Grid search space: {'n_estimators': [100, 200, 500], 'max_depth': [10, 15, 20], 'min_samples_leaf': [2, 5, 10]}  (27 combinations)
 
---- AAPL (Technology) ---
-Best params: {'max_depth': 10, 'min_samples_leaf': 2, 'n_estimators': 100}
-RMSE=24.2952  MAE=15.9324  MAPE=7.05%  R2=0.0552  (trained in 37.2s)
-
---- NVDA (Technology) ---
-Best params: {'max_depth': 15, 'min_samples_leaf': 2, 'n_estimators': 100}
-RMSE=57.4878  MAE=45.7222  MAPE=39.95%  R2=-1.6197  (trained in 23.2s)
-
---- JNJ (Healthcare) ---
-Best params: {'max_depth': 10, 'min_samples_leaf': 2, 'n_estimators': 100}
-RMSE=0.6035  MAE=0.4021  MAPE=0.27%  R2=0.9900  (trained in 17.9s)
-
---- PFE (Healthcare) ---
-Best params: {'max_depth': 15, 'min_samples_leaf': 2, 'n_estimators': 500}
-RMSE=0.2500  MAE=0.1677  MAPE=0.68%  R2=0.9755  (trained in 18.9s)
-
---- JPM (Financials) ---
-Best params: {'max_depth': 20, 'min_samples_leaf': 2, 'n_estimators': 500}
-RMSE=44.5054  MAE=35.2313  MAPE=17.11%  R2=-1.0874  (trained in 18.8s)
-
---- GS (Financials) ---
-Best params: {'max_depth': 15, 'min_samples_leaf': 2, 'n_estimators': 500}
-RMSE=92.7966  MAE=63.2757  MAPE=12.62%  R2=-0.1967  (trained in 19.2s)
-
---- XOM (Energy) ---
-Best params: {'max_depth': 10, 'min_samples_leaf': 2, 'n_estimators': 100}
-RMSE=4.8355  MAE=3.4887  MAPE=3.15%  R2=0.5588  (trained in 19.1s)
-
---- CVX (Energy) ---
-Best params: {'max_depth': 10, 'min_samples_leaf': 2, 'n_estimators': 500}
-RMSE=0.8675  MAE=0.6021  MAPE=0.43%  R2=0.9847  (trained in 20.1s)
-
---- PG (Consumer Goods) ---
-Best params: {'max_depth': 10, 'min_samples_leaf': 5, 'n_estimators': 200}
-RMSE=12.2249  MAE=9.4084  MAPE=5.82%  R2=-0.4238  (trained in 19.9s)
-
---- KO (Consumer Goods) ---
-Best params: {'max_depth': 10, 'min_samples_leaf': 2, 'n_estimators': 200}
-RMSE=4.1300  MAE=2.4586  MAPE=3.77%  R2=0.3199  (trained in 19.9s)
+Resuming: found existing results for ['AAPL', 'CVX', 'GS', 'JNJ', 'JPM', 'KO', 'NVDA', 'PFE', 'PG', 'XOM']. Skipping these.
 
 ======================================================================
 RANDOM FOREST SUMMARY (all tickers)

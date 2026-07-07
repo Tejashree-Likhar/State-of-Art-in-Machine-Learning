@@ -5,55 +5,7 @@ Architecture: LSTM(50) -> Dropout(0.2) -> Dense(1)
 Window=60, Optimizer=Adam(lr=0.001), Loss=MSE
 Max epochs=100, EarlyStopping patience=15
 
---- AAPL (Technology) ---
-Train windows=907, Val windows=159, Test windows=335
-Stopped after 36 epochs (final val_loss=0.015830)
-RMSE=20.6488  MAE=15.8062  MAPE=7.27%  R2=0.3175  (trained in 12.7s)
-
---- NVDA (Technology) ---
-Train windows=907, Val windows=159, Test windows=335
-Stopped after 34 epochs (final val_loss=0.283830)
-RMSE=70.5338  MAE=59.2942  MAPE=55.74%  R2=-2.9436  (trained in 11.1s)
-
---- JNJ (Healthcare) ---
-Train windows=907, Val windows=159, Test windows=335
-Stopped after 25 epochs (final val_loss=0.039573)
-RMSE=2.3237  MAE=1.4260  MAPE=0.96%  R2=0.8524  (trained in 10.4s)
-
---- PFE (Healthcare) ---
-Train windows=907, Val windows=159, Test windows=335
-Stopped after 45 epochs (final val_loss=0.008433)
-RMSE=0.6159  MAE=0.4972  MAPE=2.01%  R2=0.8513  (trained in 15.4s)
-
---- JPM (Financials) ---
-Train windows=907, Val windows=159, Test windows=335
-Stopped after 39 epochs (final val_loss=0.009597)
-RMSE=34.2530  MAE=25.7961  MAPE=12.40%  R2=-0.2364  (trained in 11.8s)
-
---- GS (Financials) ---
-Train windows=907, Val windows=159, Test windows=335
-Stopped after 57 epochs (final val_loss=0.005248)
-RMSE=64.8641  MAE=42.7903  MAPE=8.55%  R2=0.4153  (trained in 18.2s)
-
---- XOM (Energy) ---
-Train windows=907, Val windows=159, Test windows=335
-Stopped after 49 epochs (final val_loss=0.013164)
-RMSE=3.9208  MAE=3.3248  MAPE=3.08%  R2=0.7099  (trained in 14.0s)
-
---- CVX (Energy) ---
-Train windows=907, Val windows=159, Test windows=335
-Stopped after 30 epochs (final val_loss=0.009270)
-RMSE=2.1490  MAE=1.6558  MAPE=1.16%  R2=0.9061  (trained in 9.9s)
-
---- PG (Consumer Goods) ---
-Train windows=907, Val windows=159, Test windows=335
-Stopped after 38 epochs (final val_loss=0.009383)
-RMSE=7.7879  MAE=6.1634  MAPE=3.83%  R2=0.4222  (trained in 15.6s)
-
---- KO (Consumer Goods) ---
-Train windows=907, Val windows=159, Test windows=335
-Stopped after 41 epochs (final val_loss=0.008057)
-RMSE=3.0533  MAE=1.9900  MAPE=3.11%  R2=0.6283  (trained in 12.6s)
+Resuming: found existing results for ['AAPL', 'CVX', 'GS', 'JNJ', 'JPM', 'KO', 'NVDA', 'PFE', 'PG', 'XOM']. Skipping these.
 
 ======================================================================
 LSTM SUMMARY (all tickers)

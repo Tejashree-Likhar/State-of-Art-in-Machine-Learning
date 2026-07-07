@@ -23,7 +23,7 @@ Naive baseline mean R2:   0.9722
  measured relative to the previous day's actual close)
 
 Mean directional accuracy per model (across all 10 stocks):
-  ARIMA                       : 50.87%
+  ARIMA                       : 50.74%
   Linear Regression           : 94.13%
   Random Forest               : 67.31%
   XGBoost                     : 64.89%
@@ -34,11 +34,11 @@ Directional accuracy by stock (%):
 Model   ARIMA  LinearRegression  RandomForest  XGBoost  LSTM  Naive
 Ticker                                                             
 AAPL     46.1              91.9          56.9     52.1  43.7    0.0
-NVDA     52.7              91.6          50.6     44.0  44.0    0.0
+NVDA     53.6              91.6          50.6     44.0  44.0    0.0
 JNJ      46.9              97.9          89.9     82.4  52.2    0.0
-PFE      49.2              96.1          84.9     87.0  52.3    0.0
+PFE      46.2              96.1          84.9     87.0  52.3    0.0
 JPM      56.7              94.9          52.2     51.6  43.0    0.0
-GS       51.6              91.9          62.7     64.5  44.5    0.0
+GS       52.5              91.9          62.7     64.5  44.5    0.0
 XOM      53.8              93.4          63.7     55.3  49.8    0.0
 CVX      49.0              90.4          87.8     88.7  51.3    0.0
 PG       53.2              96.1          56.8     57.4  48.3    0.0
