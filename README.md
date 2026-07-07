@@ -7,6 +7,8 @@ dissertation. All 6 models (Naive baseline, ARIMA, Linear Regression, Random For
 XGBoost, LSTM) have been trained and evaluated on all 10 stocks; results, metrics, and
 an interactive Streamlit dashboard are included.
 
+🔗 **[Live Demo](https://state-of-art-in-machine-learning-ktorbdu9j7k7jpsnsdsnea.streamlit.app/)**  
+
 **[ Jump to: Data Sources](#1-data-sources) · [Dashboard](#2-interactive-dashboard) · [Project Structure](#3-project-structure) · [Setup & Run](#4-setup--run) · [Key Results](#5-key-results-summary)**
 
 ## 1. Data Sources
